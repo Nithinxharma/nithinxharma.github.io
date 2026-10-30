@@ -1,131 +1,78 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#050505">
-  <meta name="description" content="Abhishek Sharma — Software Developer focused on Android, Linux, open source and automation.">
-  <title>Abhishek Sharma — The Journey</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#08090c"><meta name="color-scheme" content="dark"><meta name="portfolio-build" content="story-v2-2026-10-30">
+  <meta name="description" content="Abhishek Sharma — Software Developer exploring Android, Linux, open source and practical automation.">
+  <title>Abhishek Sharma — A Work in Progress</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css?v=20261030-story-v2">
 </head>
 <body>
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="Abhishek Sharma home"><span class="brand-mark">A<span>/</span></span><span>abhishek<span class="brand-muted">.dev</span></span></a>
+  <div class="grain" aria-hidden="true"></div><div class="scroll-progress" id="scrollProgress"></div>
+  <header class="site-header"><a class="brand" href="#home" aria-label="Abhishek Sharma home">A<span class="brand-slash">/</span><small>PORTFOLIO</small></a>
     <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
-    <nav class="nav" id="mainNav">
-      <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a class="nav-contact" href="#contact">Contact <span>↗</span></a>
-    </nav>
+    <nav class="nav" id="mainNav"><a href="#story">Story</a><a href="#work">Experience</a><a href="#thinking">Mindset</a><a href="#projects">Projects</a><a href="#toolkit">Toolkit</a><a class="nav-cta" href="#contact">Let’s talk <span>↗</span></a></nav>
   </header>
-
   <main>
-    <section class="hero section-wrap" id="home">
-      <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="pulse"></span> THE JOURNEY / 001 — SOFTWARE & SYSTEMS</div>
-        <h1>ABHISHEK<br><span class="gradient-text">SHARMA.</span></h1>
-        <p class="hero-role">SOFTWARE DEVELOPER <span class="role-divider">/</span> ANDROID &amp; LINUX</p>
-        <p class="hero-description">I’m Abhishek Sharma — an independent developer interested in Android applications, Linux systems, open-source technologies and practical automation tools.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#projects">Explore projects <span>↗</span></a><a class="button button-ghost" href="#contact">Get in touch</a></div>
-        <div class="hero-meta"><span><i class="meta-dot"></i> Jaipur, India</span><span class="mono">@Nithinxharma</span></div>
+    <section class="hero chapter" id="home">
+      <div class="hero-copy"><p class="eyebrow reveal"><span class="live-dot"></span> AN ONGOING JOURNEY <i>—</i> JAIPUR, INDIA</p>
+        <h1 class="reveal">I like to know<br>how things <em>work.</em></h1>
+        <p class="hero-lede reveal">And when something can work better, I want to understand it, take it apart, and try to build a better version.</p>
+        <div class="hero-byline reveal"><span>ABHISHEK SHARMA</span><b>SOFTWARE DEVELOPER · ANDROID &amp; LINUX</b></div>
+        <a class="scroll-cue reveal" href="#story"><span class="scroll-line"></span> SCROLL TO FOLLOW THE STORY</a>
       </div>
-      <div class="hero-visual reveal">
-        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
-        <div class="profile-card glass">
-          <div class="profile-top"><span class="window-dots"><i></i><i></i><i></i></span><span class="mono">PROFILE / 001</span></div>
-          <div class="avatar-placeholder"><img src="assets/abhishek-portrait.jpg" alt="Portrait of Abhishek Sharma"></div>
-          <div class="profile-name">Abhishek Sharma</div>
-          <div class="profile-sub">Software Developer</div>
-          <div class="profile-tags"><span>Kotlin</span><span>Linux</span><span>JavaScript</span></div>
-          <div class="profile-bottom"><span class="status-led"></span> Building independently <span class="mono">2026</span></div>
-        </div>
-        <div class="floating-chip chip-top"><span class="chip-icon">⌘</span><span><b>Linux first</b><small>Development environment</small></span></div>
-        <div class="floating-chip chip-bottom"><span class="chip-icon purple">{} </span><span><b>Build · Learn · Improve</b><small>Developer mindset</small></span></div>
+      <div class="hero-portrait reveal"><div class="portrait-frame"><img src="assets/abhishek-portrait.jpg" alt="Portrait of Abhishek Sharma in a dark turtleneck in a technology workspace"></div><div class="portrait-caption"><span>01 / THE BUILDER</span><span>LEARNING BY MAKING</span></div><div class="portrait-orbit orbit-one"></div><div class="portrait-orbit orbit-two"></div></div>
+      <div class="hero-index mono">A PERSONAL FIELD NOTE <span>2026 — PRESENT</span></div>
+    </section>
+
+    <section class="chapter story section-wrap" id="story">
+      <div class="chapter-label reveal"><span>01</span><span>THE BEGINNING</span><i></i></div>
+      <div class="story-intro"><h2 class="reveal">My path wasn't<br>a straight line<span class="accent">.</span></h2><div class="story-copy reveal"><p>I started by working with people, products, machines and systems. Each role gave me a different view of how work gets done.</p><p>Over time, one habit kept showing up: notice a problem, understand the process, and look for a more useful way to do it.</p></div></div>
+      <div class="chapter-quote reveal"><span class="quote-mark">“</span><p>Different environments.<br><strong>One growing instinct: solve the problem in front of me.</strong></p><span class="quote-foot mono">A WAY OF THINKING, NOT A JOB TITLE</span></div>
+    </section>
+
+    <section class="chapter work section-wrap" id="work">
+      <div class="chapter-label reveal"><span>02</span><span>THE EXPERIENCE</span><i></i></div>
+      <div class="section-title-row"><h2 class="reveal">Every chapter<br>left me with <em>something.</em></h2><p class="reveal">A record of the work, with a reflection on what each environment helped me practise.</p></div>
+      <div class="journey-line">
+        <article class="journey-item reveal"><div class="journey-date">MAY 2026 — PRESENT <span class="now-tag">CURRENT</span></div><div class="journey-main"><h3>Customer Care Executive</h3><p class="journey-org">Dr ITM Private Limited <span>·</span> Myntra Chat Process</p><p>Handle customer queries and service-related issues through chat support, communicating solutions while following process guidelines.</p><small>THE PRACTICE — Clear written communication and structured problem handling.</small></div></article>
+        <article class="journey-item reveal"><div class="journey-date">MAR 2026 — APR 2026</div><div class="journey-main"><h3>Real Time Analyst</h3><p class="journey-org">Dr ITM Private Limited</p><p>Monitored real-time queues, agent performance and SLA adherence; supported workforce distribution and operational efficiency.</p><small>THE PRACTICE — Seeing how timing, coordination and live information affect a system.</small></div></article>
+        <article class="journey-item reveal"><div class="journey-date">JUN 2025 — MAR 2026</div><div class="journey-main"><h3>Image Validation Executive</h3><p class="journey-org">Dr ITM Private Limited <span>·</span> Myntra IMVT</p><p>Performed image validation tasks with attention to accuracy and process requirements.</p><small>THE PRACTICE — Consistency, visual attention and careful review.</small></div></article>
+        <article class="journey-item reveal"><div class="journey-date">OCT 2024 — MAY 2025</div><div class="journey-main"><h3>Electrician</h3><p class="journey-org">Krishna Electronics and Decorations <span>·</span> Gopalpura, Jaipur</p><p>Installed and maintained electrical systems for events and decorations; troubleshot wiring and lighting issues while following safety practices.</p><small>THE PRACTICE — Diagnose the cause before attempting a fix.</small></div></article>
+        <article class="journey-item reveal"><div class="journey-date">MAR 2023 — APR 2024</div><div class="journey-main"><h3>Customer Care Executive</h3><p class="journey-org">Dr ITM Private Limited <span>·</span> Paytm Process</p><p>Handled customer queries and complaints through combined chat and email support, helping resolve service-related issues.</p><small>THE PRACTICE — Translate a confusing issue into a clear next step.</small></div></article>
+        <article class="journey-item reveal"><div class="journey-date">APR 2021 — SEP 2021</div><div class="journey-main"><h3>CNC Operator</h3><p class="journey-org">BagyaShree Enterprises <span>·</span> Alwar</p><p>Operated CNC machines, monitored production processes and supported quality checks and routine equipment upkeep.</p><small>THE PRACTICE — Precision, repeatability and respect for process.</small></div></article>
+        <article class="journey-item reveal"><div class="journey-date">SEP 2020 — DEC 2020</div><div class="journey-main"><h3>Customer Sales Executive</h3><p class="journey-org">Raja Supari <span>·</span> Jaipur</p><p>Assisted customers, promoted products, handled sales transactions and supported day-to-day store service.</p><small>THE PRACTICE — Listen first; understand what someone actually needs.</small></div></article>
+      </div><p class="timeline-note">Dates are shown at month-level from the details provided. Reflections are personal interpretations, not formal job descriptions.</p>
+    </section>
+
+    <section class="chapter mindset section-wrap" id="thinking">
+      <div class="chapter-label reveal"><span>03</span><span>THE MINDSET</span><i></i></div>
+      <div class="mindset-heading"><h2 class="reveal">How I approach<br>a problem<span class="accent">.</span></h2><p class="reveal">I don't start with a tool just because it's familiar. I try to understand what is actually getting in the way.</p></div>
+      <div class="method"><article class="method-step reveal"><span class="method-no">01</span><div class="method-icon">⌕</div><h3>Observe</h3><p>Notice friction, repetition, confusing steps or a system that isn't behaving as expected.</p></article><article class="method-step reveal"><span class="method-no">02</span><div class="method-icon">⌘</div><h3>Understand</h3><p>Trace the workflow, identify constraints and learn enough about the system to make a grounded decision.</p></article><article class="method-step reveal"><span class="method-no">03</span><div class="method-icon">↗</div><h3>Build</h3><p>Try a practical improvement, test it in context and keep refining what does not work.</p></article></div>
+      <div class="mindset-note reveal"><span class="mono">CURRENT INTERESTS</span><p>Android applications <b>·</b> Linux systems <b>·</b> Open-source software <b>·</b> Workflow automation</p></div>
+    </section>
+
+    <section class="chapter projects section-wrap" id="projects">
+      <div class="chapter-label reveal"><span>04</span><span>THE THINGS I BUILD</span><i></i></div>
+      <div class="section-title-row"><h2 class="reveal">Ideas become<br>real through <em>making.</em></h2><p class="reveal">These projects show where I have applied that problem-solving instinct. Some are in use; others are still being built.</p></div>
+      <article class="case-study featured reveal"><div class="case-visual visual-extension"><div class="extension-ui"><div class="ui-top"><i></i><i></i><i></i><span>WORKFLOW / HELPER</span></div><div class="ui-title">A little less repetition.</div><div class="ui-row"><b>F1</b><span>Quick acknowledgement</span><i>↗</i></div><div class="ui-row"><b>F2</b><span>Quick reply</span><i>↗</i></div><div class="ui-row"><b>F3</b><span>FRT assistance</span><i>↗</i></div><div class="ui-foot">PERSONAL PRODUCTIVITY TOOL</div></div></div><div class="case-content"><div class="case-meta"><span>PROJECT 01 / BUILT FROM SCRATCH</span><span class="status-pill live">ACTIVELY USED</span></div><h3>Myntra Chat<br>Helper Extension</h3><p class="case-lede">A browser productivity extension designed around repetitive steps in a customer chat workflow.</p><div class="case-block"><span>THE PROBLEM</span><p>Repeated acknowledgements, replies and routine actions added friction to the daily workflow.</p></div><div class="case-block"><span>THE APPROACH</span><p>Build small, focused helpers: keyboard shortcuts, FRT assistance, acknowledgement templates, quick replies and copy-paste shortcuts.</p></div><div class="case-bottom"><div class="tags"><i>JavaScript</i><i>HTML</i><i>CSS</i></div><p>Reported impact: around 80% smoother workflow — self-estimated, not independently measured.</p></div></div></article>
+      <div class="project-pair">
+        <article class="case-study compact reveal"><div class="case-art art-player"><div class="screen-glow"><div class="screen-play">▶</div><div class="screen-controls"><i></i><i></i><i></i><i></i></div></div><span class="art-label">REX / MEDIA SYSTEM</span></div><div class="case-content"><div class="case-meta"><span>PROJECT 02</span><span class="status-pill progress">IN DEVELOPMENT</span></div><h3>REX Player / MAX-PLAYER</h3><p>An ongoing Android multimedia application project exploring playback, streaming integration and a modern app experience.</p><div class="tags"><i>Kotlin</i><i>Android SDK</i><i>Jetpack Compose</i></div><small>Still under development. Scope and contribution details will be expanded as the project progresses.</small></div></article>
+        <article class="case-study compact reveal"><div class="case-art art-matsya"><div class="matsya-symbol">M<span>✳</span></div><span class="art-label">MATSYA / SYSTEM</span><div class="matsya-grid"></div></div><div class="case-content"><div class="case-meta"><span>PROJECT 03</span><span class="status-pill progress">UNDER CONSTRUCTION</span></div><h3>Matsya OS</h3><p>A custom Linux distribution project based on Cutefish OS, with a custom Matsya desktop experience.</p><div class="tags"><i>Linux</i><i>Cutefish OS</i></div><small>Under active construction. More technical detail will be added as the build develops.</small></div></article>
       </div>
     </section>
 
-    <section class="terminal-section section-wrap reveal">
-      <div class="section-kicker">A LITTLE INTERACTIVE</div>
-      <div class="terminal glass">
-        <div class="terminal-bar"><div class="window-dots"><i></i><i></i><i></i></div><span class="mono">abhishek@portfolio: ~</span><button id="terminalClear" class="terminal-clear">CLEAR</button></div>
-        <div class="terminal-body" id="terminalOutput" aria-live="polite"><p class="terminal-muted">Type <b>help</b> to explore this profile.</p><p><span class="prompt">abhishek@portfolio:~$</span> <span class="typed">help</span></p></div>
-        <form id="terminalForm" class="terminal-input-row"><label for="terminalInput" class="prompt">abhishek@portfolio:~$</label><input id="terminalInput" autocomplete="off" spellcheck="false" placeholder="try: projects"><button aria-label="Run command">↵</button></form>
-        <div class="terminal-hints"><span>TRY</span><button data-command="about">about</button><button data-command="skills">skills</button><button data-command="projects">projects</button><button data-command="contact">contact</button></div>
-      </div>
+    <section class="chapter toolkit section-wrap" id="toolkit">
+      <div class="chapter-label reveal"><span>05</span><span>THE TOOLKIT</span><i></i></div><div class="section-title-row"><h2 class="reveal">Tools I use<br>to make <em>things happen.</em></h2><p class="reveal">A practical list of technologies and environments used in learning and personal development work — not a rating of proficiency.</p></div>
+      <div class="toolkit-grid"><article class="tool-group reveal"><span>01 / CODE &amp; WEB</span><h3>Programming</h3><p>C++ · Kotlin · JavaScript · HTML · CSS</p></article><article class="tool-group reveal"><span>02 / APPLICATIONS</span><h3>Android</h3><p>Android SDK · Jetpack Compose · XML layouts · Gradle · Firebase</p></article><article class="tool-group reveal"><span>03 / ENVIRONMENT</span><h3>Linux &amp; systems</h3><p>Linux · Ubuntu · Debian · Windows · Android · Shell / terminal</p></article><article class="tool-group reveal"><span>04 / WORKFLOW</span><h3>Tools &amp; practice</h3><p>Git · GitHub · GitHub Actions · GitHub Codespaces · Android Studio · Termux · Notepad</p></article><article class="tool-group reveal"><span>05 / HANDS-ON</span><h3>Practical areas</h3><p>System troubleshooting · Package management · Building &amp; compiling · Source control · Shell scripting</p></article></div>
     </section>
 
-    <section class="content-section section-wrap" id="about">
-      <div class="section-heading reveal"><div><div class="section-kicker">01 / ABOUT</div><h2>Curious by nature.<br><span class="muted-heading">Practical by design.</span></h2></div><p class="section-intro">I enjoy understanding how things work, finding friction in everyday workflows and building tools that make them better.</p></div>
-      <div class="about-grid">
-        <article class="about-panel glass reveal"><span class="panel-index">01</span><h3>Problem solving</h3><p>Turning practical problems into small, useful software tools — from workplace workflow helpers to application features.</p></article>
-        <article class="about-panel glass reveal"><span class="panel-index">02</span><h3>Android &amp; open source</h3><p>Working with Kotlin and Android development while exploring existing open-source architectures and multimedia applications.</p></article>
-        <article class="about-panel glass reveal"><span class="panel-index">03</span><h3>Linux systems</h3><p>Using Linux as my primary development environment and exploring custom distribution and desktop experience development.</p></article>
-      </div>
-    </section>
+    <section class="chapter github-section section-wrap" id="github"><div class="chapter-label reveal"><span>06</span><span>OPEN SOURCE FOOTPRINT</span><i></i></div><div class="github-panel reveal"><div class="github-top"><div><span class="mono">LIVE PROFILE DATA</span><h2>Work in the open.</h2><p>Public information fetched from GitHub when this page loads.</p></div><a href="https://github.com/Nithinxharma" target="_blank" rel="noopener">VISIT GITHUB ↗</a></div><div class="github-profile"><div class="github-avatar" id="githubAvatar">N</div><div><h3 id="githubName">Nithinxharma</h3><p id="githubBio">Loading public profile…</p><a href="https://github.com/Nithinxharma" target="_blank" rel="noopener">github.com/Nithinxharma ↗</a></div></div><div class="github-stats"><div><strong id="repoCount">—</strong><span>Public repositories</span></div><div><strong id="followers">—</strong><span>Followers</span></div><div><strong id="following">—</strong><span>Following</span></div></div><div class="repo-heading"><h3>Recently updated repositories</h3><span class="mono" id="githubStatus">CONNECTING</span></div><div class="repo-list" id="repoList"><p>Fetching public repositories…</p></div><p class="activity-row" id="activityText">Recent public activity will appear here when available.</p></div></section>
 
-    <section class="content-section section-wrap" id="experience">
-      <div class="section-heading reveal"><div><div class="section-kicker">02 / EXPERIENCE</div><h2>Work history<span class="gradient-text">.</span></h2></div><p class="section-intro">A chronological record of professional experience across customer operations, technical work and manufacturing.</p></div>
-      <div class="timeline">
-        <article class="timeline-item reveal"><div class="timeline-date">MAY 2026 — PRESENT</div><div class="timeline-card glass"><div class="timeline-head"><div><h3>Customer Care Executive</h3><p class="company">Dr ITM Private Limited <span>·</span> Myntra Chat Process</p></div><span class="type-tag current">CURRENT</span></div><ul><li>Handle customer queries and service-related issues through chat support.</li><li>Communicate solutions clearly while following process guidelines.</li></ul></div></article>
-        <article class="timeline-item reveal"><div class="timeline-date">MAR 2026 — APR 2026</div><div class="timeline-card glass"><div class="timeline-head"><div><h3>Real Time Analyst (RTA)</h3><p class="company">Dr ITM Private Limited</p></div></div><ul><li>Monitored real-time queues, agent performance and SLA adherence.</li><li>Supported workforce distribution and operational efficiency.</li></ul></div></article>
-        <article class="timeline-item reveal"><div class="timeline-date">JUN 2025 — MAR 2026</div><div class="timeline-card glass"><div class="timeline-head"><div><h3>Image Validation Executive</h3><p class="company">Dr ITM Private Limited <span>·</span> Myntra IMVT</p></div></div><ul><li>Performed image validation tasks with attention to accuracy and process requirements.</li></ul></div></article>
-        <article class="timeline-item reveal"><div class="timeline-date">OCT 2024 — MAY 2025</div><div class="timeline-card glass"><div class="timeline-head"><div><h3>Electrician</h3><p class="company">Krishna Electronics and Decorations <span>·</span> Gopalpura, Jaipur</p></div></div><ul><li>Installed and maintained electrical systems for events and decorations.</li><li>Troubleshot wiring and lighting issues while following safety practices.</li></ul></div></article>
-        <article class="timeline-item reveal"><div class="timeline-date">MAR 2023 — APR 2024</div><div class="timeline-card glass"><div class="timeline-head"><div><h3>Customer Care Executive</h3><p class="company">Dr ITM Private Limited <span>·</span> Paytm Process</p></div></div><ul><li>Handled customer queries and complaints through combined chat and email support.</li><li>Provided information about Paytm services and helped resolve service-related issues.</li></ul></div></article>
-        <article class="timeline-item reveal"><div class="timeline-date">APR 2021 — SEP 2021</div><div class="timeline-card glass"><div class="timeline-head"><div><h3>CNC Operator</h3><p class="company">BagyaShree Enterprises <span>·</span> Alwar</p></div></div><ul><li>Operated CNC machines and monitored production processes.</li><li>Supported quality checks and routine equipment upkeep.</li></ul></div></article>
-        <article class="timeline-item reveal"><div class="timeline-date">SEP 2020 — DEC 2020</div><div class="timeline-card glass"><div class="timeline-head"><div><h3>Customer Sales Executive</h3><p class="company">Raja Supari <span>·</span> Jaipur</p></div></div><ul><li>Assisted customers, promoted products and handled sales transactions.</li><li>Supported day-to-day customer service at the store.</li></ul></div></article>
-      </div>
-      <p class="timeline-note">Employment dates are shown at month-level based on the information currently verified. The April 2026 transition gap is intentionally not filled.</p>
-    </section>
+    <section class="chapter education section-wrap" id="education"><div class="chapter-label reveal"><span>07</span><span>EDUCATION</span><i></i></div><div class="section-title-row"><h2 class="reveal">Learning is<br>still <em>in progress.</em></h2><p class="reveal">Formal education is one part of the journey. The details below are presented as they are, without implying a completed degree.</p></div><div class="education-list"><article class="education-item reveal"><span>2021 — 2025</span><div><h3>B.Tech — Computer Science &amp; Engineering</h3><p>ICFAI University, Jaipur</p><small>Discontinued after 5th semester · Degree not completed</small></div></article><article class="education-item reveal"><span>2019 — 2020</span><div><h3>Senior Secondary — PCM</h3><p>Rajasthan Board of Secondary Education (RBSE)</p><small>69%</small></div></article><article class="education-item reveal"><span>2017 — 2018</span><div><h3>Secondary</h3><p>Rajasthan Board of Secondary Education (RBSE)</p><small>88.50%</small></div></article></div></section>
 
-    <section class="content-section section-wrap" id="skills">
-      <div class="section-heading reveal"><div><div class="section-kicker">03 / TOOLKIT</div><h2>Technical skills<span class="gradient-text">.</span></h2></div><p class="section-intro">Technologies and environments I have used in learning and personal development work.</p></div>
-      <div class="skills-layout">
-        <div class="skill-group glass reveal"><div class="skill-group-title"><span class="skill-symbol">{ }</span><h3>Programming &amp; web</h3></div><div class="skill-chips"><span>C++</span><span>Kotlin</span><span>JavaScript</span><span>HTML</span><span>CSS</span></div></div>
-        <div class="skill-group glass reveal"><div class="skill-group-title"><span class="skill-symbol">▣</span><h3>Android development</h3></div><div class="skill-chips"><span>Android SDK</span><span>Jetpack Compose</span><span>XML layouts</span><span>Gradle</span></div></div>
-        <div class="skill-group glass reveal"><div class="skill-group-title"><span class="skill-symbol">⌁</span><h3>Tools &amp; workflow</h3></div><div class="skill-chips"><span>Git</span><span>GitHub</span><span>GitHub Actions</span><span>GitHub Codespaces</span><span>Android Studio</span><span>Termux</span><span>Notepad</span></div></div>
-        <div class="skill-group glass reveal"><div class="skill-group-title"><span class="skill-symbol">⌘</span><h3>Operating systems</h3></div><div class="skill-chips"><span>Linux</span><span>Ubuntu</span><span>Debian</span><span>Windows</span><span>Android</span><span>Shell / terminal</span></div></div>
-        <div class="skill-group glass reveal"><div class="skill-group-title"><span class="skill-symbol">⚙</span><h3>Practical areas</h3></div><div class="skill-chips"><span>System troubleshooting</span><span>Package management</span><span>Building &amp; compiling</span><span>Source control</span><span>Shell scripting</span><span>Firebase</span></div></div>
-      </div>
-      <p class="timeline-note">REST API experience is not listed. Proficiency levels are intentionally omitted until they can be demonstrated.</p>
-    </section>
-
-    <section class="content-section section-wrap" id="projects">
-      <div class="section-heading reveal"><div><div class="section-kicker">04 / SELECTED WORK</div><h2>Things I’m building<span class="gradient-text">.</span></h2></div><p class="section-intro">Independent projects focused on workflow automation, Android development and Linux systems.</p></div>
-      <div class="projects-grid">
-        <article class="project-card glass reveal"><div class="project-top"><span class="project-number">PROJECT / 01</span><span class="type-tag current">IN USE</span></div><div class="project-art art-extension"><div class="extension-window"><div class="mini-bar"><i></i><i></i><i></i></div><div class="mini-lines"><b></b><i></i><i></i><i></i></div><div class="mini-key">⌘</div></div></div><h3>Myntra Chat Helper Extension</h3><p class="project-summary">A browser productivity extension created from scratch to streamline repetitive tasks in a customer chat workflow.</p><div class="project-features"><span>Keyboard shortcuts</span><span>FRT assistance</span><span>Acknowledgements</span><span>Quick replies</span></div><div class="project-footer"><div class="tech-tags"><span>JavaScript</span><span>HTML</span><span>CSS</span></div><span class="project-status">Built independently · Actively used</span></div><p class="impact-note">Reported impact: approximately 80% smoother workflow (self-estimated).</p></article>
-        <article class="project-card glass reveal"><div class="project-top"><span class="project-number">PROJECT / 02</span><span class="type-tag progress">IN DEVELOPMENT</span></div><div class="project-art art-player"><div class="player-screen"><div class="play-button">▶</div><div class="player-controls"><i></i><i></i><i></i><i></i></div></div><div class="player-orbit"></div></div><h3>REX Player / MAX-PLAYER</h3><p class="project-summary">An ongoing Android multimedia application project exploring playback, streaming integration and a modern application experience.</p><div class="project-features"><span>Android</span><span>Multimedia</span><span>Streaming integration</span></div><div class="project-footer"><div class="tech-tags"><span>Kotlin</span><span>Android</span><span>Jetpack Compose</span></div><span class="project-status">Under development</span></div><p class="impact-note">Repository link and exact contribution breakdown will be added after review.</p></article>
-        <article class="project-card glass reveal"><div class="project-top"><span class="project-number">PROJECT / 03</span><span class="type-tag progress">UNDER CONSTRUCTION</span></div><div class="project-art art-os"><div class="os-logo">M<span>✳</span></div><div class="os-caption mono">MATSYA / SYSTEM</div><div class="os-grid"></div></div><h3>Matsya OS</h3><p class="project-summary">A custom Linux distribution project based on Cutefish OS, with a custom Matsya desktop experience.</p><div class="project-features"><span>Linux distribution</span><span>Desktop environment</span><span>Customisation</span></div><div class="project-footer"><div class="tech-tags"><span>Linux</span><span>Cutefish OS</span></div><span class="project-status">Under active construction</span></div><p class="impact-note">Project ownership stated by Abhishek; technical scope can be expanded when repository details are available.</p></article>
-      </div>
-    </section>
-
-    <section class="content-section section-wrap" id="github">
-      <div class="section-heading reveal"><div><div class="section-kicker">05 / OPEN SOURCE PRESENCE</div><h2>GitHub activity<span class="gradient-text">.</span></h2></div><p class="section-intro">Public profile and repository information loaded from GitHub. Live data may be limited by GitHub API availability.</p></div>
-      <div class="github-panel glass reveal">
-        <div class="github-profile"><div class="github-avatar" id="githubAvatar">N</div><div><h3 id="githubName">Nithinxharma</h3><p id="githubBio">Loading public GitHub profile…</p><a href="https://github.com/Nithinxharma" target="_blank" rel="noopener">Open GitHub profile ↗</a></div></div>
-        <div class="github-stats"><div><strong id="repoCount">—</strong><span>Public repositories</span></div><div><strong id="followers">—</strong><span>Followers</span></div><div><strong id="following">—</strong><span>Following</span></div></div>
-        <div class="repo-heading"><h3>Recent public repositories</h3><span class="mono" id="githubStatus">CONNECTING TO API</span></div>
-        <div class="repo-list" id="repoList"><p class="muted">Fetching public repositories…</p></div>
-        <div class="activity-row"><span class="activity-icon">⌁</span><span id="activityText">Recent public activity will appear here when available.</span></div>
-      </div>
-    </section>
-
-    <section class="content-section section-wrap" id="education">
-      <div class="section-heading reveal"><div><div class="section-kicker">06 / EDUCATION</div><h2>Education<span class="gradient-text">.</span></h2></div></div>
-      <div class="education-list">
-        <article class="education-card glass reveal"><div class="education-year">2021 — 2025</div><div><h3>B.Tech — Computer Science &amp; Engineering</h3><p>ICFAI University, Jaipur</p><span class="education-note">Discontinued after 5th semester · Degree not completed</span></div></article>
-        <article class="education-card glass reveal"><div class="education-year">2019 — 2020</div><div><h3>Senior Secondary — PCM</h3><p>Rajasthan Board of Secondary Education (RBSE)</p><span class="education-note">69%</span></div></article>
-        <article class="education-card glass reveal"><div class="education-year">2017 — 2018</div><div><h3>Secondary</h3><p>Rajasthan Board of Secondary Education (RBSE)</p><span class="education-note">88.50%</span></div></article>
-      </div>
-    </section>
-
-    <section class="content-section section-wrap" id="contact">
-      <div class="contact-panel glass reveal"><div class="section-kicker">07 / CONTACT</div><h2>Have a problem<br><span class="gradient-text">worth solving?</span></h2><p>For technical opportunities, collaborations or freelance work, feel free to reach out.</p><div class="contact-links"><a href="mailto:nithinxharma@gmail.com" class="contact-link"><span>EMAIL</span><b>nithinxharma@gmail.com ↗</b></a><a href="https://www.linkedin.com/in/abhishek-sharma-a057a1322/" target="_blank" rel="noopener" class="contact-link"><span>LINKEDIN</span><b>Connect professionally ↗</b></a><a href="https://github.com/Nithinxharma" target="_blank" rel="noopener" class="contact-link"><span>GITHUB</span><b>@Nithinxharma ↗</b></a><a href="https://www.instagram.com/nithinxharma/" target="_blank" rel="noopener" class="contact-link"><span>INSTAGRAM</span><b>@nithinxharma ↗</b></a></div></div>
-    </section>
+    <section class="closing section-wrap" id="contact"><div class="closing-orb"></div><div class="chapter-label reveal"><span>08</span><span>THE NEXT CHAPTER</span><i></i></div><div class="closing-content reveal"><p class="eyebrow">OPEN TO TECHNICAL OPPORTUNITIES</p><h2>Still curious.<br><em>Still building.</em></h2><p>For software and Android opportunities, technical collaborations or freelance work, let's start a conversation.</p><a class="email-link" href="mailto:nithinxharma@gmail.com">nithinxharma@gmail.com <span>↗</span></a></div><div class="social-links reveal"><a href="https://www.linkedin.com/in/abhishek-sharma-a057a1322/" target="_blank" rel="noopener">LINKEDIN ↗</a><a href="https://github.com/Nithinxharma" target="_blank" rel="noopener">GITHUB ↗</a><a href="https://www.instagram.com/nithinxharma/" target="_blank" rel="noopener">INSTAGRAM ↗</a><span>JAIPUR, INDIA</span></div></section>
   </main>
-
-  <footer class="footer section-wrap"><a class="brand" href="#home"><span class="brand-mark">A<span>/</span></span><span>abhishek<span class="brand-muted">.dev</span></span></a><p>Designed and built with curiosity. <span>© <span id="year"></span> Abhishek Sharma</span></p><a href="#home" class="back-top">BACK TO TOP ↑</a></footer>
-  <script src="script.js"></script>
-</body>
-</html>
+  <footer class="footer section-wrap"><a class="brand" href="#home">A<span class="brand-slash">/</span><small>PORTFOLIO</small></a><p>Made with curiosity. © <span id="year"></span> Abhishek Sharma</p><a href="#home">BACK TO TOP ↑</a></footer>
+  <script src="script.js?v=20261030-story-v2"></script>
+</body></html>
