@@ -1,11 +1,14 @@
-# Content to verify before broad public sharing
+# Content to verify before final public launch
 
-- [ ] Confirm the exact Raja Supari business name and location. Existing CV details say Raja Supari, Jaipur; a later map reference may point to a different branch/business listing.
-- [ ] Review each employment date, title and description for accuracy.
-- [ ] Confirm the exact Matsya OS base and current technical scope before expanding its description.
-- [ ] Add project repository URLs only after confirming they are the correct public repositories.
-- [ ] Add real project screenshots only when they do not expose confidential employer or customer information.
-- [ ] Decide whether to publish date of birth; it is currently omitted from the website.
-- [ ] Review contact details before publishing.
+This first build uses the information collected in conversation and the uploaded CV. Review these items before making the repository public.
 
-The workflow improvement estimate for the Myntra Chat Helper Extension is labelled as self-reported and not independently measured.
+1. Exact legal employer spelling and locations for Dr ITM, Krishna Electronics and Decorations, BagyaShree Enterprises and Raja Supari.
+2. Whether the public-facing title "Image Validation Executive" is preferred over the original CV title "Customer Care Executive (Myntra IMVT - Image Validation)".
+3. Confirm the dates shown as month/year. The CV says RTA started 15 March 2026 and the later Myntra Chat role started 3 May 2026. The intervening period is intentionally left unexplained.
+4. The current Myntra Chat role is recorded as Chat-only.
+5. The 80% workflow improvement is labelled as a self-estimate, not a measured result.
+6. REX Player / MAX-PLAYER exact ownership, contribution and repository URL remain to be confirmed.
+7. Matsya OS repository URL and exact technical scope remain to be confirmed.
+8. Add a real profile photo only if desired.
+9. Verify the Instagram URL and decide whether to publish WhatsApp contact details. WhatsApp handle was not converted into a public link.
+10. Confirm whether date of birth should remain on the public portfolio. It is omitted from the current website.
