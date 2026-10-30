@@ -34,3 +34,7 @@ The GitHub section calls the public GitHub REST API without an access token. Thi
 - The site is designed to work as a static GitHub Pages website.
 - The terminal widget is a local portfolio information simulator, not a real shell.
 - The PDF can be created from the browser using **Print → Save as PDF**. The browser print layout may be refined after content verification.
+
+
+## Visual direction update
+The portfolio now uses an editorial monochrome “The Journey” direction: oversized outlined typography, grayscale portrait, chapter-numbered experience timeline, fine grid/noise texture, restrained acid-lime accents, and sharper glass/outline panels. The original interactive terminal, GitHub public-data section, navigation, and responsive layout are retained.
