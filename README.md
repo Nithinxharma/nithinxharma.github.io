@@ -38,3 +38,10 @@ The GitHub section calls the public GitHub REST API without an access token. Thi
 
 ## Visual direction update
 The portfolio now uses an editorial monochrome “The Journey” direction: oversized outlined typography, grayscale portrait, chapter-numbered experience timeline, fine grid/noise texture, restrained acid-lime accents, and sharper glass/outline panels. The original interactive terminal, GitHub public-data section, navigation, and responsive layout are retained.
+
+
+## Integrated parallax animation
+
+The supplied SVG parallax scene is integrated as a fixed, decorative background controlled by GSAP ScrollTrigger. The original portfolio sections, navigation, terminal simulator, GitHub API integration, and profile image are retained. The animation reference is credited to its original author: https://codepen.io/isladjan/pen/abdyPBw (project information: https://isladjan.com/work/4/). See `LICENSE-parallax.txt` for the supplied license.
+
+GSAP and ScrollTrigger are loaded from their public CDN. The page remains readable if those scripts are unavailable. Users who prefer reduced motion receive a static background treatment.

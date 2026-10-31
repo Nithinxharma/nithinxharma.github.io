@@ -1,4 +1,1 @@
-Abhishek Sharma Portfolio
-Build: STORY V2
-Date: 2026-10-30
-This package contains the website files at ZIP root for direct extraction into the GitHub Pages repository.
+ABHISHEK PORTFOLIO — MERGED PARALLAX BUILD 1.0\nBase: abhishek-portfolio-with-new-photo.zip\nAnimation: supplied parallax-scroll-animation.zip\n
