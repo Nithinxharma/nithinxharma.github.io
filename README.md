@@ -17,3 +17,7 @@ Open `index.html` in a browser. The page works without a build step. GitHub live
 
 ## Before public sharing
 Review `CONTENT-TO-VERIFY.md`, particularly workplace naming and project descriptions. Do not publish confidential employer or customer information.
+
+
+## SEO and lead generation
+See `SEO-AND-LEADS.md` for Google Search Console setup, sitemap submission, indexing steps and lead form behaviour. The form opens an email draft locally; it does not store leads on a server.

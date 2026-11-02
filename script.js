@@ -14,6 +14,21 @@
   const year = $('#year');
   if (year) year.textContent = new Date().getFullYear();
 
+  // Privacy-light lead capture: compose an email locally; no form data is sent to a server.
+  const leadForm = $('#leadForm');
+  leadForm?.addEventListener('submit', event => {
+    event.preventDefault();
+    const data = new FormData(leadForm);
+    const name = String(data.get('name') || '').trim();
+    const email = String(data.get('email') || '').trim();
+    const topic = String(data.get('topic') || '').trim();
+    const message = String(data.get('message') || '').trim();
+    if (!name || !email || !topic || !message) return;
+    const subject = encodeURIComponent(`Portfolio enquiry: ${topic}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nEnquiry: ${topic}\n\nMessage:\n${message}`);
+    window.location.href = `mailto:nithinxharma@gmail.com?subject=${subject}&body=${body}`;
+  });
+
   // Quiet scroll progress; no parallax, pinned scenes, copied demo code or external libraries.
   const progress = $('#scrollProgress');
   let ticking = false;
