@@ -1,31 +1,21 @@
-# JoystickJunction — GitHub Pages-ready static website
+# JoystickJunction — VONLYLEGAL-inspired storefront
 
-This version is built for GitHub Pages: plain HTML, CSS and JavaScript. It does not require Node.js, a build step, or a backend.
+This is an original implementation inspired by the reference website's information architecture and shopping flow, not a pixel-perfect copy and not using its proprietary assets.
 
-## Included
-- Premium responsive gaming storefront UI
-- PS5 rental pricing: ₹700/day
-- Extra controller: ₹200/day
-- Duration selector: 1, 2, 5 and 30 days
-- Sample game catalogue with category filters and search
-- Add-to-setup drawer and live estimate calculator
-- Booking enquiry modal with date, time slot, address and payment preference
-- WhatsApp prefilled booking enquiry
-- Stores local enquiry copies in the browser's localStorage
-- FAQ, mobile navigation and responsive layout
+## Features
+- Cinematic featured hero with four manually controlled slides
+- Header navigation and WhatsApp order CTA
+- PS5 console and controller rental cards
+- Rental duration selector (1/2/5/30 days) and estimate
+- Category filters, game cards, searchable game collection
+- Booking enquiry modal: name, phone, game/console request, date, time, Jaipur address, payment preference
+- WhatsApp prefilled enquiry
+- Responsive mobile navigation, FAQ and footer
 
-## Configure WhatsApp
-Open `app.js` and set:
-`whatsappNumber: "91XXXXXXXXXX"`
-Use country code + number, digits only. Example format: `919876543210`.
+## Setup
+Set `WHATSAPP_NUMBER` in `app.js` to your business number, e.g. `919876543210` (digits only).
 
-If left blank, WhatsApp opens a share/chat chooser with the prefilled message.
+Copy this folder into `joystickjunction/` in your existing GitHub Pages repo. The static website needs no Node.js or build step.
 
-## Deploy under your existing GitHub Pages repository
-Copy the contents of this folder into a subfolder named `joystickjunction` in your existing `Nithinxharma.github.io` repository. Then open:
-`https://nithinxharma.github.io/joystickjunction/`
-
-## Important limitations
-This is a functional static lead-generation website, not a true backend booking/payment platform. It cannot reserve inventory, securely collect payments, confirm stock, or show an admin dashboard across devices. Online payment is a preference captured in the enquiry; no payment is charged. Add a backend (e.g. Supabase + server hosting + Razorpay) before accepting real online payments or claiming bookings are confirmed.
-
-The game covers are CSS-designed placeholders and titles are illustrative. Replace them with owned/licensed product artwork and actual inventory. The supplied logo artwork is included as a visual reference; the header uses a custom minimal JJ monogram.
+## Limits
+This static website collects enquiries through WhatsApp. It does not reserve inventory, store shared leads in a server database, process online payments or provide an admin panel. Online payment is only a customer preference until a secure backend and payment gateway are integrated. Product names/artwork are illustrative; confirm actual catalogue, rights, rates and stock before publishing.

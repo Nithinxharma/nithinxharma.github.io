@@ -1,46 +1,24 @@
-// JoystickJunction static storefront. Configure your WhatsApp number before publishing.
-const CONFIG = { whatsappNumber: "", currency: "INR" }; // Example: "918239983037" (country code + number, no +)
-const $ = (s, r=document) => r.querySelector(s);
-const $$ = (s, r=document) => [...r.querySelectorAll(s)];
-let days = 1;
-let cart = JSON.parse(localStorage.getItem("jj-cart") || "[]");
-const money = n => "₹" + Number(n).toLocaleString("en-IN");
-const total = () => cart.reduce((sum,x)=>sum+x.price*x.qty*days,0);
-function save(){localStorage.setItem("jj-cart",JSON.stringify(cart));renderCart();}
-function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2400);}
-function renderCart(){
- $("#cartCount").textContent=cart.reduce((s,x)=>s+x.qty,0);
- $("#cartTotal").textContent=money(total());
- $("#cartDuration").textContent=`For ${days} day${days>1?"s":""} · final charges subject to confirmation`;
- $("#cartItems").innerHTML=cart.length?cart.map((x,i)=>`<div class="cart-line"><div><b>${x.name}</b><small>${money(x.price)} / day</small></div><div class="qty"><button data-minus="${i}" aria-label="Decrease">−</button><b>${x.qty}</b><button data-plus="${i}" aria-label="Increase">+</button></div></div>`).join(""):'<p class="muted">Your setup is empty. Add a console or controller to begin.</p>';
- $("#cartItems").querySelectorAll("[data-minus]").forEach(b=>b.onclick=()=>{const i=+b.dataset.minus;cart[i].qty--;if(!cart[i].qty)cart.splice(i,1);save();});
- $("#cartItems").querySelectorAll("[data-plus]").forEach(b=>b.onclick=()=>{cart[+b.dataset.plus].qty++;save();});
- $("#modalEstimate").textContent=money(total());
-}
-function openDrawer(){$("#drawer").classList.add("open");$("#overlay").classList.add("show");}
-function closeDrawer(){$("#drawer").classList.remove("open");$("#overlay").classList.remove("show");}
-function openModal(game=""){closeDrawer();$("#gameField").value=game;$("#formDays").value=String(days);$("#bookingModal").classList.add("show");$("#overlay").classList.add("show");$("#modalEstimate").textContent=money(total());}
-function closeModal(){$("#bookingModal").classList.remove("show");$("#overlay").classList.remove("show");}
-$$(".add").forEach(b=>b.addEventListener("click",()=>{const item={name:b.dataset.name,price:+b.dataset.price,type:b.dataset.type,qty:1};const found=cart.find(x=>x.name===item.name);found?found.qty++:cart.push(item);save();toast(item.name+" added to your setup");}));
-$$(".duration").forEach(b=>b.onclick=()=>{days=+b.dataset.days;$$(".duration").forEach(x=>x.classList.toggle("active",x===b));$("#durationHint").textContent=`Estimated PS5 + add-ons: ${money(total())} for ${days} day${days>1?"s":""}. Game charges, delivery and deposit may be extra.`;renderCart();});
-$("#openCart").onclick=openDrawer;$("#closeCart").onclick=closeDrawer;$("#overlay").onclick=()=>{closeDrawer();closeModal();};$("#checkout").onclick=()=>cart.length?openModal():toast("Add a console or controller first.");
-$("#closeModal").onclick=closeModal;$("#ctaBook").onclick=()=>openModal();$("#customGame").onclick=()=>openModal("Specific game request — please quote");
-$("#formDays").onchange=e=>{days=+e.target.value;renderCart();};
-$$(".game-request").forEach(b=>b.onclick=()=>openModal(b.dataset.game+" — rental price / permanent purchase enquiry"));
-$("#gameSearch").addEventListener("input",filterGames);
-let category="all";
-$$(".filter").forEach(b=>b.onclick=()=>{category=b.dataset.filter;$$(".filter").forEach(x=>x.classList.toggle("active",x===b));filterGames();});
-function filterGames(){const q=$("#gameSearch").value.toLowerCase();$$(".game-card").forEach(c=>c.hidden=!(category==="all"||c.dataset.category===category)||!c.dataset.title.toLowerCase().includes(q));}
-$("#menuToggle").onclick=()=>$("#nav").classList.toggle("open");
-$$("nav a").forEach(a=>a.onclick=()=>$("#nav").classList.remove("open"));
-$("#year").textContent=new Date().getFullYear();
-const today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());$("#dateInput").min=today.toISOString().slice(0,10);
-$("#bookingForm").addEventListener("submit",e=>{
- e.preventDefault();const d=Object.fromEntries(new FormData(e.currentTarget).entries());
- const lines=[`Hello JoystickJunction, I want to enquire about a booking.`,`Name: ${d.name}`,`Phone: ${d.phone}`,`Email: ${d.email||"Not provided"}`,`Setup: ${cart.map(x=>`${x.qty} × ${x.name}`).join(", ")||"PS5 console rental (please confirm)"}`,`Duration: ${d.days} day(s)`,`Estimated console/add-on amount: ${money(total())}`,`Delivery date: ${d.date}`,`Time: ${d.slot}`,`Address: ${d.address}`,`Payment preference: ${d.payment}`,`Game request: ${d.games||"None"}`,`Please confirm stock, final charges, deposit and delivery.`].join("\n");
- const url=CONFIG.whatsappNumber?`https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(lines)}`:`https://wa.me/?text=${encodeURIComponent(lines)}`;
- const record={...d,days,cart,estimated:total(),createdAt:new Date().toISOString(),status:"Enquiry prepared — awaiting WhatsApp confirmation"};
- const leads=JSON.parse(localStorage.getItem("jj-enquiries")||"[]");leads.push(record);localStorage.setItem("jj-enquiries",JSON.stringify(leads));
- window.open(url,"_blank","noopener");closeModal();toast("Enquiry prepared. Complete sending it in WhatsApp.");
-});
-renderCart();
+// Set your business WhatsApp number below (country code + number, digits only).
+const WHATSAPP_NUMBER = "919660480130";
+const featured=[
+ {k:"THE NEXT CHAPTER IS YOURS",t:"Your next<br><em>great game.</em>",d:"PlayStation favourites, flexible rental plans and personal support — delivered across Jaipur.",s:"PLAY YOUR WAY"},
+ {k:"MAKE EVERY MATCH COUNT",t:"Bring the<br><em>whole squad.</em>",d:"Add another controller, choose your favourite sports title and make it a game night.",s:"PLAYER TWO, READY"},
+ {k:"A WORLD TO GET LOST IN",t:"Find your next<br><em>adventure.</em>",d:"Explore action, RPG and adventure favourites. Rent a title or ask about buying it.",s:"YOUR NEXT WORLD"},
+ {k:"THE CONSOLE COMES TO YOU",t:"Game on.<br><em>Your way.</em>",d:"Choose your PS5 rental duration and preferred Jaipur delivery slot.",s:"JAIPUR DELIVERY"}
+];let slide=0,days=1,items=["PS5 Console — ₹700/day"];
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+function showSlide(){const x=featured[slide];$("#heroKicker").textContent=x.k;$("#heroTitle").innerHTML=x.t;$("#heroDesc").textContent=x.d;$("#sideTitle").textContent=x.s;$("#slideCount").textContent=`0${slide+1} / 04`;}
+$("#prev").onclick=()=>{slide=(slide+3)%4;showSlide()};$("#next").onclick=()=>{slide=(slide+1)%4;showSlide()};
+$$("[data-days]").forEach(b=>b.onclick=()=>{days=+b.dataset.days;$$("[data-days]").forEach(x=>x.classList.toggle("selected",x===b));const base=items.some(x=>x.startsWith("PS5 Console"))?700:0,extra=items.some(x=>x.startsWith("Extra Controller"))?200:0;$("#estimate").textContent=`PS5 estimate: ₹${(base+extra)*days} for ${days} day(s)`;});
+function toast(s){$("#toast").textContent=s;$("#toast").classList.add("show");setTimeout(()=>$("#toast").classList.remove("show"),2200)}
+$$(".add").forEach(b=>b.onclick=()=>{if(!items.includes(b.dataset.item))items.push(b.dataset.item);toast("Added to your enquiry: "+b.dataset.item);const base=items.some(x=>x.startsWith("PS5 Console"))?700:0,extra=items.some(x=>x.startsWith("Extra Controller"))?200:0;$("#estimate").textContent=`PS5 estimate: ₹${(base+extra)*days} for ${days} day(s)`;});
+$$("[data-game]").forEach(b=>b.onclick=()=>openModal(`Game enquiry: ${b.dataset.game} — please share rental and permanent purchase price.`));
+$$("[data-filter]").forEach(b=>b.onclick=()=>{$$("[data-filter]").forEach(x=>x.classList.toggle("active",x===b));$$(".game").forEach(c=>c.hidden=!(b.dataset.filter==="all"||c.dataset.cat===b.dataset.filter));});
+const library=[["Phantom Blade Zero","PS5 · Action"],["Elden Ring","PS5 / PS4 · RPG"],["EA SPORTS FC","PS5 · Sports"],["Call of Duty","PS5 · Action"],["Ghost of Tsushima","PS5 / PS4 · Adventure"],["A Way Out","PS4 · Adventure"],["God of War Ragnarök","PS5 · Action"],["Spider-Man 2","PS5 · Adventure"],["Gran Turismo","PS5 · Racing"],["The Last of Us","PS5 · Adventure"]];
+function renderLibrary(q=""){$("#collectionList").innerHTML=library.filter(x=>x.join(" ").toLowerCase().includes(q.toLowerCase())).map(x=>`<div class="collection-row"><div><b>${x[0]}</b><br><small>${x[1]}</small></div><button data-lib="${x[0]}">Enquire ↗</button></div>`).join("")||"<p>No matching titles. Request a custom game below.</p>";$$("[data-lib]").forEach(b=>b.onclick=()=>openModal(`Game enquiry: ${b.dataset.lib} — rent or buy; please quote.`));}
+renderLibrary();$("#search").oninput=e=>renderLibrary(e.target.value);
+function openModal(text=""){ $("#interest").value=[...items,text].filter(Boolean).join("\n");$("#modal").classList.add("show");}
+$("#orderBtn").onclick=()=>openModal();$("#x").onclick=()=>$("#modal").classList.remove("show");$("#modal").onclick=e=>{if(e.target.id==="modal")$("#modal").classList.remove("show")};
+$("#hamb").onclick=()=>$("#nav").classList.toggle("open");$$("nav a").forEach(a=>a.onclick=()=>$("#nav").classList.remove("open"));
+const dt=new Date();dt.setMinutes(dt.getMinutes()-dt.getTimezoneOffset());$("#date").min=dt.toISOString().slice(0,10);$("#year").textContent=new Date().getFullYear();
+$("#form").onsubmit=e=>{e.preventDefault();const d=Object.fromEntries(new FormData(e.target).entries());const msg=[`Hello JoystickJunction, I want to enquire:`, `Name: ${d.name}`,`Phone: ${d.phone}`,`Interest: ${d.interest}`,`Preferred date: ${d.date}`,`Time: ${d.slot}`,`Address: ${d.address}`,`Payment: ${d.payment}`,`Rental duration: ${days} day(s)`,`Please confirm stock, final price, delivery and deposit.`].join("\n");const url=WHATSAPP_NUMBER?`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`:`https://wa.me/?text=${encodeURIComponent(msg)}`;window.open(url,"_blank","noopener");$("#modal").classList.remove("show");toast("WhatsApp enquiry prepared. Please send the message.");};
