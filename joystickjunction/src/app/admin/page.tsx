@@ -1,0 +1,6 @@
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Link from "next/link";
+
+const metrics=[["New enquiries","—","Connect database"],["Active bookings","—","Live booking status"],["Available consoles","—","Inventory sync"],["Monthly revenue","—","Paid orders only"]];
+export default function Admin(){return <><Header/><main className="container" style={{padding:"55px 0"}}><div className="eyebrow">Store operations</div><h1 style={{fontSize:46}}>Admin overview</h1><p className="muted">Dashboard shell. Sign-in, role checks and live database queries must be enabled before exposing this route publicly.</p><div className="grid-cards" style={{marginTop:28}}>{metrics.map(m=><div className="panel" key={m[0]} style={{padding:22}}><div className="muted">{m[0]}</div><div style={{fontSize:34,fontWeight:800,margin:"12px 0"}}>{m[1]}</div><small className="muted">{m[2]}</small></div>)}</div><div className="grid-cards" style={{marginTop:18}}>{["Inventory","Bookings","Game catalogue","Sales & analytics"].map(x=><div className="panel" style={{padding:22}} key={x}><h3>{x}</h3><p className="muted">Management module placeholder</p></div>)}</div><p style={{marginTop:24}}><Link href="/" className="btn btn-secondary">Return to storefront</Link></p></main><Footer/></>}
