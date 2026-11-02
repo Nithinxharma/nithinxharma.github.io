@@ -1,24 +1,20 @@
-PORTFOLIO STORY V2 — TERMUX INSTALL
+TERMUX INSTALL
 
-1. Download the ZIP to your phone (usually /sdcard/Download).
-2. Run these commands. They copy the ZIP ROOT files into your existing site folder.
+1. Download abhishek-portfolio-apple-editorial.zip into your phone's Download folder.
+2. Run:
 
 cd ~/portfolio/abhishek-portfolio
-mkdir -p backup-before-story-v2
-cp -r index.html styles.css script.js README.md CONTENT-TO-VERIFY.md assets backup-before-story-v2/ 2>/dev/null || true
-mkdir -p /tmp/portfolio-story-v2
-unzip -o /sdcard/Download/abhishek-portfolio-story-v2.zip -d /tmp/portfolio-story-v2
-cp -r /tmp/portfolio-story-v2/. .
-rm -rf /tmp/portfolio-story-v2
+mkdir -p ~/portfolio-apple-update
+unzip -o /sdcard/Download/abhishek-portfolio-apple-editorial.zip -d ~/portfolio-apple-update
+cp -r ~/portfolio-apple-update/abhishek-portfolio/. .
+rm -rf ~/portfolio-apple-update
 
-3. Confirm the new build is present:
+3. Verify:
 cat BUILD-VERSION.txt
-grep -n 'story-v2-20261030' index.html
 
 4. Publish:
-git status
-git add index.html styles.css script.js BUILD-VERSION.txt INSTALL-TERMUX.txt assets README.md CONTENT-TO-VERIFY.md
-git commit -m "Publish portfolio story rebuild v2"
+git add .
+git commit -m "Redesign portfolio with minimal editorial system"
 git push origin main
 
-If Git says there is nothing to commit, check that you are in the correct repository folder and that the downloaded ZIP was extracted.
+If your repository folder is different, replace ~/portfolio/abhishek-portfolio with your actual local website folder. If unzip reports errors, stop before running cp or git commands.

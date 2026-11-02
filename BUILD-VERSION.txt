@@ -1,1 +1,6 @@
-ABHISHEK PORTFOLIO — MERGED PARALLAX BUILD 1.0\nBase: abhishek-portfolio-with-new-photo.zip\nAnimation: supplied parallax-scroll-animation.zip\n
+BUILD: apple-editorial-v1
+DATE: 2026-11-02
+THEME: system light/dark via prefers-color-scheme
+TYPE: native Apple-style system font stack with fallbacks
+MOTION: subtle CSS reveals only; no parallax.js, GSAP, ScrollTrigger or external font dependency
+PRESERVED: portfolio content, experience, projects, GitHub API integration, responsive navigation, portrait and contact links
