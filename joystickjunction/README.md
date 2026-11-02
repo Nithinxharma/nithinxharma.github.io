@@ -1,45 +1,31 @@
-# JoystickJunction — Full-stack starter
+# JoystickJunction — GitHub Pages-ready static website
 
-Premium PS5 console and game rental + permanent game sales platform, designed for Jaipur.
+This version is built for GitHub Pages: plain HTML, CSS and JavaScript. It does not require Node.js, a build step, or a backend.
 
 ## Included
-- Premium dark storefront and navigation
-- Catalogue starter page
-- Rental enquiry form with 1 / 2 / 5 / 30 day options
-- Current known base pricing: PS5 ₹700/day; extra controller ₹200/day
-- Admin dashboard shell
-- Supabase schema for products, inventory, bookings, booking items, leads, profiles and analytics events
-- Server-side availability endpoint
-- Booking creation endpoint with COD and Razorpay order creation paths
-- Razorpay webhook signature verification
-- Environment variable template and deployment notes
+- Premium responsive gaming storefront UI
+- PS5 rental pricing: ₹700/day
+- Extra controller: ₹200/day
+- Duration selector: 1, 2, 5 and 30 days
+- Sample game catalogue with category filters and search
+- Add-to-setup drawer and live estimate calculator
+- Booking enquiry modal with date, time slot, address and payment preference
+- WhatsApp prefilled booking enquiry
+- Stores local enquiry copies in the browser's localStorage
+- FAQ, mobile navigation and responsive layout
 
-## Important implementation status
-This is a **working project scaffold, not a production-ready live store**. Do not accept customer payments or claim a booking is confirmed until the remaining production work is completed:
-1. Add Supabase project credentials and run `supabase/schema.sql`.
-2. Implement Supabase Auth, admin role verification and protected admin routes.
-3. Add robust inventory locking/transactional booking creation to prevent double booking.
-4. Add the Razorpay Checkout client-side confirmation flow, verify payment signatures server-side, and test webhook retries/idempotency.
-5. Add lead creation and analytics event endpoints, dashboards and reporting queries.
-6. Add product CRUD, images/storage, game-specific pricing, sale cart, order fulfilment and stock adjustments.
-7. Add delivery fees, security deposit, late return, cancellation, damage/loss and ID-verification policies.
-8. Confirm exact game library, included games, sale prices, service PIN codes and delivery time windows.
-9. Add rate limiting, CAPTCHA/anti-spam, privacy policy, terms, backups and monitoring.
-10. Test mobile checkout and all payment states in Razorpay test mode before going live.
+## Configure WhatsApp
+Open `app.js` and set:
+`whatsappNumber: "91XXXXXXXXXX"`
+Use country code + number, digits only. Example format: `919876543210`.
 
-The current booking page is a front-end form preview. The API endpoints are starter implementations and must be hardened before launch. Admin page is not yet authenticated. The public site should not expose `/admin` until auth and authorization are implemented.
+If left blank, WhatsApp opens a share/chat chooser with the prefilled message.
 
-## Local setup
-- Node.js 20+
-- `npm install`
-- Copy `.env.example` to `.env.local` and fill credentials
-- `npm run dev`
+## Deploy under your existing GitHub Pages repository
+Copy the contents of this folder into a subfolder named `joystickjunction` in your existing `Nithinxharma.github.io` repository. Then open:
+`https://nithinxharma.github.io/joystickjunction/`
 
-## Deployment
-Deploy this project separately from the existing personal portfolio. For a subpath deployment such as `/playslot/`, configure Next.js `basePath` and `assetPrefix` before building. Recommended: use a dedicated subdomain or domain for production to simplify routing and checkout redirects.
+## Important limitations
+This is a functional static lead-generation website, not a true backend booking/payment platform. It cannot reserve inventory, securely collect payments, confirm stock, or show an admin dashboard across devices. Online payment is a preference captured in the enquiry; no payment is charged. Add a backend (e.g. Supabase + server hosting + Razorpay) before accepting real online payments or claiming bookings are confirmed.
 
-## Payments
-Razorpay keys are server-side. Never put `RAZORPAY_KEY_SECRET`, `SUPABASE_SERVICE_ROLE_KEY` or webhook secrets in browser code or public repositories. COD bookings remain pending until manually confirmed.
-
-## Brand assets
-The included visual identity is an initial text-and-icon implementation based on the minimal JoystickJunction direction. Replace the icon with the approved standalone logo artwork and export SVG/PNG variants for header, favicon and social sharing.
+The game covers are CSS-designed placeholders and titles are illustrative. Replace them with owned/licensed product artwork and actual inventory. The supplied logo artwork is included as a visual reference; the header uses a custom minimal JJ monogram.

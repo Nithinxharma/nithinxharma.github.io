@@ -1,1 +1,1 @@
-BUILD: joystickjunction-fullstack-starter-v1
+BUILD: joystickjunction-static-github-pages-v2
