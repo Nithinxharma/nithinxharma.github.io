@@ -1,5 +1,5 @@
 // Set your business WhatsApp number below (country code + number, digits only).
-const WHATSAPP_NUMBER = "919660480130";
+const WHATSAPP_NUMBER = "";
 const featured=[
  {k:"THE NEXT CHAPTER IS YOURS",t:"Your next<br><em>great game.</em>",d:"PlayStation favourites, flexible rental plans and personal support — delivered across Jaipur.",s:"PLAY YOUR WAY"},
  {k:"MAKE EVERY MATCH COUNT",t:"Bring the<br><em>whole squad.</em>",d:"Add another controller, choose your favourite sports title and make it a game night.",s:"PLAYER TWO, READY"},
